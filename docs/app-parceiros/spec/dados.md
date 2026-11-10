@@ -80,3 +80,19 @@
 - **Base legal:** execução de contrato (cadastro/assinatura) e legítimo interesse (avaliações e segurança); consentimento para WhatsApp e avisos de marketing.
 - **Retenção:** conta cancelada → **anonimização após 30 dias** (avaliações viram "usuário removido"); negócios e pagamentos guardados 5 anos sem identificação pessoal (fiscal); mensagens de chat 2 anos (assumido).
 - Usuário pode baixar ou apagar seus dados pelo app. Todas as ações de admin ficam no LogAuditoria.
+
+## Ajustes pós-revisão (PLAN) — fórmulas fechadas
+- **Nota da avaliação** = média simples dos critérios.
+- **Nota do corretor:** `peso = peso_origem (negócio 3 · parceiro 1,5 · cliente pós-visita 1) × peso_idade (≤12 meses 1 · >12 meses 0,5)`; `média = Σ(peso·nota)/Σpeso`; `n` = nº bruto de avaliações; `nota_exibida = (n·média + 5·4,0)/(n+5)`. Selo "Novo" enquanto n < 5.
+- **Avaliação de negócio** vale para **todos** os corretores do negócio.
+- **Visita realizada:** confirmação de anfitrião + solicitante (ou de um deles sem contestação em 48h).
+- **tempo de resposta:** só 8h–21h, todos os dias (feriados contam); conversa nunca respondida = 24h; média das últimas 30 conversas.
+- `resposta_norm` = 1 até 15 min, queda linear até 0 em 24h; sem histórico = 0,5.
+- `atividade_norm` = min-max sobre o p95 dos corretores.
+- **Feed (MVP):** `ordem = score × aderência × recência`; aderência = 0,5 + 0,5 × proporção de filtros do perfil de interesse atendidos (1 se não há perfil); recência com meia-vida de 14 dias; máx. 2 seguidos do mesmo corretor.
+- **Pesos e fórmulas versionados** em `configuracoes` (guardar versão aplicada em `corretor_metricas`).
+- **Chave única de avaliação:** (origem, ref_id, avaliador_id, avaliado_id) — permite avaliar parceiro e cliente na mesma visita.
+- **Campos novos:** `Interacao.dispositivo_id` (usuario opcional); `Pagamento.evento_id` UNIQUE (webhook idempotente); `Corretor.nao_comparecimentos`; `Convite.status` (pendente/aceito/expirado/cancelado); `Imovel.confirmado_em`; tabela `consentimentos` (tipo, versão, concedido_em, revogado_em); `usuario_papeis`.
+- **Nomes padronizados:** `area_m2`; imobiliária `nome_fantasia`.
+- **Retenção corrigida:** pagamentos guardados identificados por 5 anos (obrigação fiscal), acesso restrito ao admin; mensagens de usuário removido continuam para a outra parte como "usuário removido"; nota recebida pelo cliente aparece no export de `/me/dados` (LGPD art. 18).
+- **Preço inicial:** R$ 49,90 editável pelo admin.

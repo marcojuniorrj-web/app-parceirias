@@ -49,3 +49,12 @@ toda visita realizada gera avaliação mútua, e quem atende melhor aparece mais
 - Formato: **web app no celular** (instalável na tela inicial).
 - Sem prazo definido: construção no ritmo das ondas.
 - Exigência legal a observar: LGPD (dados de clientes) e validação de CRECI (assumido).
+
+## Ajustes pós-revisão (PLAN, aprovados pelo Marco)
+- **Metas 90 dias após o lançamento:** 100 corretores verificados · 300 visitas avaliadas · **15 negócios confirmados** · 30% conversão teste→pago. Medidas no painel admin (T16).
+- **Negócio válido para a meta:** registrado por um corretor e **confirmado pelo parceiro**, ou pelo cliente via avaliação de compra/locação quando não houver parceiro.
+- **Piloto:** rede Unnità, 30–50 corretores convidados, 5–8 bairros (definir lista), cadastro assistido dos primeiros imóveis; meta de 300 imóveis ativos no lançamento.
+- **MVP enxuto.** Saem para v2 (ver `plan/versoes-futuras.md`): importação XML, Google Agenda via OAuth (no MVP: convite `.ics`), feed que aprende por comportamento (no MVP: perfil de interesse + filtros + score), vista em mapa, modo escuro, avisos de imóvel novo/buscas salvas com aviso, plano fixo da imobiliária, detecção de pares suspeitos, foto no depoimento, revalidação mensal do CRECI, login Google.
+- **Avaliação de compra/locação (peso 3)** faz parte do MVP.
+- **CRECI:** verificação manual no MVP (SLA 24h); automática quando houver fornecedor.
+- **Imobiliária no MVP:** perfil, vínculo da equipe, nota média e painel simples; **cada corretor paga a própria assinatura** (R$ 49,90, editável pelo admin).

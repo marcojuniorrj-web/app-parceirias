@@ -106,3 +106,15 @@ Gestor ─► T15 Painel da imobiliária        Admin ─► T16 Painel admin
 - **Tipografia (assumido):** sans-serif geométrica (ex.: Inter / Plus Jakarta Sans).
 - **Tom de voz:** próximo, direto e respeitoso, em português do Brasil. Fala "você", sem jargão técnico, valoriza o corretor ("sua reputação", "sua rede").
 - **Referências:** Instagram (feed/perfil), Uber (avaliação pós-serviço), QuintoAndar (detalhe do imóvel).
+
+## Ajustes pós-revisão (PLAN)
+- **Padrão de estados** em todas as telas: carregando (esqueleto) · vazio (mensagem + ação) · erro (mensagem + "tentar de novo") · sucesso (toast) · bloqueio (status + próximo passo).
+- **Telas novas:** T17 Registrar acordo de comissão (formulário + aceite do parceiro) · T18 Registrar negócio fechado + confirmação do parceiro · T19 Cadastro da imobiliária · T20 Configurações (consentimento WhatsApp, baixar dados, apagar conta, sair de todos os aparelhos) · T21 Conta suspensa / bloqueio de CRECI.
+- **Pendências no app:** selo em Conversas e cartão no topo do Feed para "visita aconteceu?" e "avaliação pendente" (não depende só de notificação).
+- **Login com retorno:** após entrar pelo T6, o usuário volta ao ponto de origem com a ação concluída (ex.: ♥ já salvo).
+- **T3:** dono e parceiro com visita confirmada veem endereço exato; status vendido/alugado/pausado/oculto tratados; dono vê esses status em "Meus imóveis".
+- **T7:** campos separados "finalidade" (venda/locação) e "categoria" (residencial/comercial); falha de upload por foto com refazer; aviso "faltam X fotos".
+- **T14:** estados teste grátis · ativa · vence em X dias · em tolerância · vencida · pagamento pendente (Pix aguardando) · recusado.
+- **Menus:** gestor = menu do corretor + "Equipe"; admin entra em T16 com menu lateral; corretor também acessa Salvos pelo Perfil.
+- **Offline:** último feed em cache; mensagens do chat em fila "enviando…".
+- **v2 (fora do MVP):** mapa no T12, modo escuro, avisos de imóvel novo, foto no depoimento.

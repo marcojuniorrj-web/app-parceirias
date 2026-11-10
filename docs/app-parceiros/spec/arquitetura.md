@@ -132,3 +132,11 @@ Base `/api/v1`, JSON, sessão por cookie. Perfis: V=visitante, C=cliente, K=corr
 | LGPD | — | CPF cifrado + hash para unicidade; endereço exato restrito; anonimização por cron; log de auditoria |
 | Nome/domínio | — | Placeholder; trocar marca é configuração, não código |
 | Fora do MVP | patrocínio, campanhas Google/TikTok/Meta, jurídico, repasses, lançamentos, app nas lojas | Registrar em `plan/versoes-futuras.md` no /plan; o score orgânico já nasce separado do patrocinado |
+
+## Ajustes pós-revisão (PLAN)
+- **Login:** SMS como padrão até a aprovação do template de autenticação do WhatsApp na Meta; depois WhatsApp primeiro e SMS como reserva. Iniciar a aprovação da Meta já.
+- **Google Agenda:** MVP envia convite `.ics`; OAuth na v2.
+- **Importação XML:** v2.
+- **Todos os adaptadores** começam com versão falsa (mock) para desenvolvimento e testes.
+- UNIQUE de `avaliacoes` corrigida para (origem, ref_id, avaliador_id, avaliado_id).
+- Nova tabela `usuario_papeis`, `consentimentos`; `pagamentos.evento_id` UNIQUE.

@@ -89,3 +89,16 @@ Volume esperado no lançamento (assumido): centenas de corretores e milhares de 
 9. **Como gestor, quero convidar corretores e ver a nota da equipe** — aceite: convite por celular; nota da imobiliária = média ponderada da equipe.
 10. **Como admin, quero aprovar CRECI e moderar denúncias** — aceite: filas com aprovar/reprovar; ações ficam registradas.
 11. **Como corretor inadimplente, mantenho meu perfil** — aceite: imóveis ocultos do feed, notas preservadas, reativa ao pagar.
+
+## Ajustes pós-revisão (PLAN)
+- **Papéis múltiplos:** um usuário pode ter vários papéis (cliente + corretor; corretor + gestor). Tabela `usuario_papeis`.
+- **Primeiro acesso:** "Sou cliente" · "Sou corretor" · "Sou imobiliária" (CNPJ, CRECI jurídico) · "Tenho convite". Cliente pode virar corretor depois pelo Perfil.
+- **Visitante não agenda visita** (qualquer contato exige login) — corrige a matriz.
+- **Gestor:** se também for corretor (CRECI verificado), atua como corretor em visitas e avaliações; senão só gerencia. Pode confirmar "ainda disponível" de imóveis da equipe.
+- **CRECI reprovado:** status "Pendente de ação", reenvio até 3 vezes.
+- **Corretor removido da equipe:** notas ficam com ele; imóveis pausados; vira autônomo com 7 dias para assinar.
+- **Suspensão:** tela "Conta suspensa" com pedido de revisão; tudo no log de auditoria.
+- **Sessão:** 30 dias renovável; "sair de todos os aparelhos"; troca de celular com código nos dois números.
+- **Admin:** o primeiro é criado por configuração (seed); os demais por um admin, com log.
+- **Editar/cancelar:** avaliação editável em 24h (não apagável, só por moderação); resposta pública editável; visita confirmada pode ser cancelada com motivo; acordo e negócio podem ser contestados pelo parceiro (vai ao admin); autor acompanha status da denúncia.
+- **Assinatura ativa do corretor de imobiliária (MVP):** a própria assinatura.
