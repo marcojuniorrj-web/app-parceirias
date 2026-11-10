@@ -1,23 +1,20 @@
-name = "app-parceiros"
-main = "src/worker.js"
+name = "app-parceiros-teste"
+main = "src/worker_publicado.js"
 compatibility_date = "2025-01-01"
-workers_dev = false
+workers_dev = true   # endereço de teste: app-parceiros-teste.<subdomínio>.workers.dev
+preview_urls = false
 
-# interface PWA servida como arquivos estáticos; só /api/* passa pelo Worker
-[assets]
-directory = "./src/web"
-binding = "ASSETS"
-not_found_handling = "single-page-application"
-run_worker_first = ["/api/*"]
+# A interface (src/web) é embutida no Worker no build (build-web.mjs → dist/web.js).
+# Motivo: o envio de "assets" da Cloudflare não funciona atrás do proxy do ambiente de desenvolvimento; revisar na Fase 9.
 
 # os testes barram a publicação: se `node --test` falhar, não há deploy
 [build]
-command = "node --test"
+command = "node --test && node build-web.mjs"
 
 [[d1_databases]]
 binding = "DB"
-database_name = "parceiros"
-database_id = "PREENCHER-APOS-CRIAR-O-BANCO"
+database_name = "parceiros-teste"
+database_id = "30e6bca2-511b-49ef-80e1-72799e509b83"
 migrations_dir = "migracoes"
 
 # R2 (fotos) entra na Fase 2
@@ -28,7 +25,7 @@ migrations_dir = "migracoes"
 [vars]
 AMBIENTE = "teste"          # teste | producao
 MENSAGERIA = "falsa"        # falsa (só teste) | real (Fase 9)
-ADMIN_CELULARES = ""        # celulares dos primeiros admins (55 + DDD + número), separados por vírgula
+ADMIN_CELULARES = "5521999990000"   # celulares dos primeiros admins (55 + DDD + número), separados por vírgula. TESTE: número fictício
 
 # segredo obrigatório (não vai aqui): npx wrangler secret put SEGREDO_APP
 

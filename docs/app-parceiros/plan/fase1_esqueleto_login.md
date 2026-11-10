@@ -5,7 +5,7 @@ App instalável no celular: abrir o feed (vazio com exemplo), entrar com celular
 nada
 ## Tarefas (prompts pequenos)
 - [x] 1.1a Projeto Worker + D1 + rotas base + `node --test` ligado ao deploy (`[build]` do wrangler) — aceite: servidor local abre e 113 testes passam
-- [ ] 1.1b Publicar em ambiente de teste (criar banco D1 `parceiros-teste`, segredo `SEGREDO_APP`, endereço de teste) — aceite: página abre no endereço de teste; **pendente: precisa da conta Cloudflare/domínio (decisão do Marco)**. R2 fica para a Fase 2
+- [x] 1.1b Publicar em ambiente de teste — aceite: página abre em https://app-parceiros-teste.marco-junior-rj.workers.dev (banco D1 `parceiros-teste`, segredo `SEGREDO_APP` gravado, migração aplicada; verificado por curl e navegador). R2 fica para a Fase 2. Domínio próprio fica para a Fase 9
 - [x] 1.2 Design system base (cores, tipografia, botões, cartões, esqueleto, toast) + componentes de estado (vazio/erro/sucesso/bloqueio) — aceite: página de amostra legível em 360px, contraste AA
 - [x] 1.3 Shell PWA: manifest, service worker, menu inferior por perfil — aceite: manifest/ícones/service worker verificados no Chromium; cada perfil vê o menu certo (testado). **Instalação em Android e iOS reais: Marco confirma no roteiro de teste**
 - [x] 1.4 Migração 001: usuarios, usuario_papeis, sessoes, codigos_otp, clientes, corretores (cpf cifrado + hash), configuracoes, log_auditoria — aceite: CPF repetido é recusado
