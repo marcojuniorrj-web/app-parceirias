@@ -2,7 +2,7 @@
 
 | Fase | Arquivo | Entrega (funcionalidade completa) | Status |
 |------|---------|-----------------------------------|--------|
-| 1 | fase1_esqueleto_login.md | **Esqueleto e login** — App instalável no celular: abrir o feed (vazio com exemplo), entrar com celular + código, escolher perfil (cliente/corretor/imobiliária/convite), cadastrar CRECI e ver o status; admin aprova CRECI numa fila. | pendente |
+| 1 | fase1_esqueleto_login.md | **Esqueleto e login** — App instalável no celular: abrir o feed (vazio com exemplo), entrar com celular + código, escolher perfil (cliente/corretor/imobiliária/convite), cadastrar CRECI e ver o status; admin aprova CRECI numa fila. | código pronto, aguardando seu teste |
 | 2 | fase2_imoveis_feed.md | **Imóveis e feed** — Corretor verificado publica imóvel (≥ 8 fotos); cliente vê no feed estilo Instagram, filtra, abre o detalhe, salva e vê o perfil público do corretor. | pendente |
 | 3 | fase3_conversas_parcerias.md | **Conversas e parcerias** — Cliente fala com o corretor e corretor pede parceria pelo chat em tempo real; corretores registram o acordo de comissão; o app mede o tempo de resposta. | pendente |
 | 4 | fase4_visitas_avaliacoes.md | **Visitas e avaliações** — Agendar visita pelo chat, confirmar, receber lembrete e convite de agenda (.ics), marcar 'visita realizada' e avaliar em estrelas por critério (às cegas); notas aparecem no perfil. | pendente |

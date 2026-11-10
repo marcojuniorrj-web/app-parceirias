@@ -1,0 +1,3 @@
+# Copie para .dev.vars (não versionado). Segredos de verdade entram por `wrangler secret put`.
+SEGREDO_APP=troque-por-uma-frase-longa-e-aleatoria-com-32-ou-mais-caracteres
+ADMIN_CELULARES=5521999990000

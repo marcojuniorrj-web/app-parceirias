@@ -1,0 +1,13 @@
+{
+  "name": "app-parceiros",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "App de corretores parceiros (nome comercial a definir)",
+  "scripts": {
+    "test": "node --test",
+    "dev": "node dev/servidor.js",
+    "e2e": "node testes/e2e/fluxo.mjs"
+  },
+  "engines": { "node": ">=22.13" }
+}
