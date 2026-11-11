@@ -1,6 +1,6 @@
 ---
 name: usuarios
-description: Skill de SPEC "Usuários". Use quando o usuário digitar "/usuarios" ou quando a skill /spec chamar. Faz perguntas em português e cria docs/<projeto>/spec/usuarios.md. Não escreve código.
+description: Skill de SPEC "Usuários". Use quando o usuário digitar "/usuarios" ou quando a skill /spec chamar. Faz perguntas em português e cria docs/NOME-DO-PROJETO/spec/usuarios.md. Não escreve código.
 ---
 
 # SPEC › Usuários

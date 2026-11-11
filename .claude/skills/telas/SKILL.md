@@ -1,6 +1,6 @@
 ---
 name: telas
-description: Skill de SPEC "Telas". Use quando o usuário digitar "/telas" ou quando a skill /spec chamar. Faz perguntas em português e cria docs/<projeto>/spec/telas.md. Não escreve código.
+description: Skill de SPEC "Telas". Use quando o usuário digitar "/telas" ou quando a skill /spec chamar. Faz perguntas em português e cria docs/NOME-DO-PROJETO/spec/telas.md. Não escreve código.
 ---
 
 # SPEC › Telas

@@ -1,6 +1,6 @@
 ---
 name: visao
-description: Skill de SPEC "Visão". Use quando o usuário digitar "/visao" ou quando a skill /spec chamar. Faz perguntas em português e cria docs/<projeto>/spec/visao.md. Não escreve código.
+description: Skill de SPEC "Visão". Use quando o usuário digitar "/visao" ou quando a skill /spec chamar. Faz perguntas em português e cria docs/NOME-DO-PROJETO/spec/visao.md. Não escreve código.
 ---
 
 # SPEC › Visão

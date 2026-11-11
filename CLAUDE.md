@@ -10,7 +10,9 @@ Tarefas pequenas e pontuais não precisam do método.
 |------|---------|----------------|----------|
 | **SPEC** — você explica | `/spec` (roda `/visao`, `/usuarios`, `/telas`, `/dados`) | O Claude faz perguntas em português; você responde. Depois ele define a arquitetura a partir de um modelo com boas práticas | `docs/<projeto>/spec/` visao, usuarios, telas, dados, arquitetura |
 | **PLAN** — o Claude planeja | `/plan` | 4 agentes revisam a SPEC em paralelo (visão, usuários, telas, dados) apontando lacunas, conflitos e tarefas; depois o Claude divide a construção em fases (ondas), cada uma entregando uma funcionalidade completa | `docs/<projeto>/plan/` indice, mapa, cobertura, execucao, faseN_*.md |
-| **BUILD** — o Claude constrói, você testa | `/build` | Constrói uma onda por vez; você testa tudo e pede a próxima | código + `plan/execucao.md` |
+| **BUILD** — o Claude constrói, você testa | `/build` | Constrói uma onda por vez com subagentes (construtor, revisor e testes); você testa tudo e pede a próxima | código + `plan/execucao.md` |
+
+**Atalho:** `/projeto` (ou "Onde paramos?") lê o `execucao.md`, mostra a fase atual e chama a skill certa.
 
 Regras:
 - Não pule fases: sem SPEC aprovada não há PLAN; sem PLAN aprovado não há código.

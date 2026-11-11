@@ -1,6 +1,6 @@
 ---
 name: dados
-description: Skill de SPEC "Dados". Use quando o usuário digitar "/dados" ou quando a skill /spec chamar. Faz perguntas em português e cria docs/<projeto>/spec/dados.md. Não escreve código.
+description: Skill de SPEC "Dados". Use quando o usuário digitar "/dados" ou quando a skill /spec chamar. Faz perguntas em português e cria docs/NOME-DO-PROJETO/spec/dados.md. Não escreve código.
 ---
 
 # SPEC › Dados
